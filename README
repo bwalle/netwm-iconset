@@ -1,0 +1,25 @@
+Compilation/Installation
+------------------------
+
+To compile the program, you have to install the "fltk-devel" package (the name
+is different in every Linux distribution). After that, run
+
+ % fltk-config --use-images --compile  netwm-iconset.cc
+
+The resulting binary called 'netwm-iconset' can be copied somewhere in the
+$PATH, for example in /usr/local/bin or $HOME/bin for a per-user installation.
+
+
+Usage
+-----
+
+Just run 'netwm-iconset <windowid> <icon.png>' to set the icon of the currently
+running program. The program is mainly designed for Terminals like the
+xfce4-terminal that don't have the capability to modify the icon as a command
+line parameter. The set the $WINDOWID environment so that you can just run
+
+ % netwm-iconset $WINDOWID /usr/share/icons/mutt.png
+
+for example to set the Terminal icon for Mutt (a dog instead of a Terminal
+window).
+
